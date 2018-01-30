@@ -1,4 +1,4 @@
-## Instruction
+## Instructions
 
 ```bash
 npm init
