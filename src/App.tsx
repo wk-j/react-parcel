@@ -7,7 +7,10 @@ type State = {
     count: number
 }
 
-export class App extends React.Component<{}, State> {
+type Props = {
+    title: string
+}
+export class App extends React.Component<Props, State> {
     constructor(props) {
         super(props)
         this.state = { count: 0 }
@@ -27,24 +30,5 @@ export class App extends React.Component<{}, State> {
     }
 }
 
-let render = App => {
-    var element = document.getElementById("app")
-    ReactDOM.render(<App />, element);
-}
-
-render(App);
-
-/*
-declare var module: any;
-
-if (module.hot) {
-    console.log("hot")
-    module.hot.dispose(function () {
-        console.log("dispose")
-        // module is about to be replaced
-    });
-
-    module.hot.accept(() => {
-        // module or one of its dependencies was just updated
-    });
-}*/
+var element = document.getElementById("app")
+ReactDOM.render(<App title="Hello, world!" />, element);
