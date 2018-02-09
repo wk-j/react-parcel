@@ -28,12 +28,13 @@ export class App extends React.Component<{}, State> {
 }
 
 let render = App => {
-    var app = document.getElementById("app")
-    ReactDOM.render(<App />, app);
+    var element = document.getElementById("app")
+    ReactDOM.render(<App />, element);
 }
 
 render(App);
 
+/*
 declare var module: any;
 
 if (module.hot) {
@@ -46,4 +47,4 @@ if (module.hot) {
     module.hot.accept(() => {
         // module or one of its dependencies was just updated
     });
-}
+}*/
